@@ -9,6 +9,7 @@ gem 'uglifier', '>= 2.7.1'
 
 gem 'jquery-rails'
 
+gem 'faraday'
 
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
@@ -27,4 +28,9 @@ end
 group :production do
   gem 'pg', '~> 0.2'
   gem 'rails_12factor'
+end
+
+group :test do
+  gem 'rails-controller-testing'
+  gem 'guard-rspec'                 # automates re-running tests
 end
